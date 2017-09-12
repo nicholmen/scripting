@@ -16,7 +16,7 @@ var https = require('https');
 //   path: '/'
 // };
 
-function getAndPrintHTML2 (options) {
+function getHTML (options, printHTML) {
 
   var bufferVar;
 
@@ -44,7 +44,11 @@ function getAndPrintHTML2 (options) {
 
 }
 
-getAndPrintHTML2({
+function printHTML (html) {
+  console.log(html);
+}
+
+getHTML({
     host: 'sytantris.github.io',
     path: '/http-examples/step1.html'
   });
