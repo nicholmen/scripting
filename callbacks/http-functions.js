@@ -16,7 +16,7 @@ var https = require('https');
 //   path: '/'
 // };
 
-function getHTML (options, callback) {
+module.exports = function getHTML (options, callback) {
 
   var bufferVar;
 
@@ -44,11 +44,4 @@ function getHTML (options, callback) {
 
 }
 
-function printHTML (html) {
-  console.log(html);
-}
 
-getHTML({
-    host: 'sytantris.github.io',
-    path: '/http-examples/step1.html'
-  }, function(result) {console.log(result.toUpperCase())});
